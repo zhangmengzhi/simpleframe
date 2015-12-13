@@ -24,5 +24,5 @@ public interface ConfigConstant {
     String APP_BASE_PACKAGE = "smart.framework.app.base_package";
     String APP_JSP_PATH = "smart.framework.app.jsp_path";         // 默认/WEB-INF/view/
     String APP_ASSET_PATH = "smart.framework.app.asset_path";     // 默认/asset/
-    String APP_UPLOAD_LIMIT = "smart.framework.app.upload_limit";
+    String APP_UPLOAD_LIMIT = "smart.framework.app.upload_limit"; // 默认10
 }
