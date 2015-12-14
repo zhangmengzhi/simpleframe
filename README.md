@@ -4,7 +4,7 @@
 在阅读《架构探险-从零开始写Java Web框架》，作者 黄勇 ，ISBN 978-7-121-26829-8 ，出版社 电子工业出版社 ，出版时间 2015年8月。很有意思。下载了作者的代码，写了这个项目用于内部技术交流。
 
 joke
-simpleframe 的使用案例项目。包含传统开发方式（org.zhangmz.simpleframe.joke），simpleframe开发方式（org.zhangmz.simpleframe.smartjoke）。
+simpleframe 的使用案例项目。包含传统开发方式（org.zhangmz.simpleframe.joke），simpleframe开发方式（org.zhangmz.simpleframe.simplejoke）。
 
 simpleframe-core 
 simpleframe 的本体，实现了Java Web框架必须的MVC、IOC、AOP、ORMapping等功能。
