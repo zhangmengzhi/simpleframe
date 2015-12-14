@@ -16,6 +16,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.MapListHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.zhangmz.simpleframe.joke.model.Customer;
 import org.zhangmz.simpleframe.joke.util.CollectionUtil;
 import org.zhangmz.simpleframe.joke.util.PropsUtil;
 
@@ -112,6 +113,15 @@ public final class DatabaseHelper {
         }
         return entityList;
     }
+    
+    /**
+     * 查询实体列表
+     * add by zhangmengzhi 2015-12-14
+     */
+    public static <T> List<T> queryEntityList(Class<T> entityClass, Object... params) {
+    	String sql = "SELECT * FROM " + getTableName(entityClass);
+        return queryEntityList(entityClass, sql);
+    }
 
     /**
      * 查询实体
@@ -126,6 +136,15 @@ public final class DatabaseHelper {
             throw new RuntimeException(e);
         }
         return entity;
+    }
+    
+    /**
+     * 查询实体
+     * add by zhangmengzhi 2015-12-14
+     */
+    public static <T> T queryEntity(Class<T> entityClass, Object... params) {
+        String sql = "SELECT * FROM " + getTableName(entityClass) + " WHERE id = ?";
+        return DatabaseHelper.queryEntity(entityClass, sql, params);
     }
 
     /**

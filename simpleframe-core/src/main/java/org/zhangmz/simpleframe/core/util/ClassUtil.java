@@ -105,7 +105,11 @@ public final class ClassUtil {
     }
 
     private static void addClass(Set<Class<?>> classSet, String packagePath, String packageName) {
-        File[] files = new File(packagePath).listFiles(new FileFilter() {
+//      // 文件过滤，Lambda 表达式，要求JDK8
+//    	File[] files = new File(packagePath).listFiles(file ->
+//                (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory()
+//        );
+    	File[] files = new File(packagePath).listFiles(new FileFilter() {
             public boolean accept(File file) {
                 return (file.isFile() && file.getName().endsWith(".class")) || file.isDirectory();
             }
@@ -119,6 +123,7 @@ public final class ClassUtil {
                 }
                 doAddClass(classSet, className);
             } else {
+            	// 子包（目录），递归加载class
                 String subPackagePath = fileName;
                 if (StringUtil.isNotEmpty(packagePath)) {
                     subPackagePath = packagePath + "/" + subPackagePath;

@@ -25,6 +25,16 @@ public class PropsUtil {
      */
     public static Properties loadProps(String fileName) {
         Properties props = null;
+//        // 要求JDK8
+//        try (InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(fileName)) {
+//        	if (is == null) {
+//                throw new FileNotFoundException(fileName + " file is not found");
+//            }
+//            props = new Properties();
+//            props.load(is);
+//		} catch (Exception e) {
+//			LOGGER.error("load properties file failure", e);
+//		}
         InputStream is = null;
         try {
             is = Thread.currentThread().getContextClassLoader().getResourceAsStream(fileName);

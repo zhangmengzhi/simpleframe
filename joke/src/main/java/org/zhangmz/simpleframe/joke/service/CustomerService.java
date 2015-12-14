@@ -14,6 +14,9 @@ public class CustomerService {
      * 获取客户列表
      */
     public List<Customer> getCustomerList() {
+    	// 更简单的写法
+        // return DatabaseHelper.queryEntityList(Customer.class);
+    	
         String sql = "SELECT * FROM customer";
         return DatabaseHelper.queryEntityList(Customer.class, sql);
     }
@@ -22,6 +25,9 @@ public class CustomerService {
      * 获取客户
      */
     public Customer getCustomer(long id) {
+    	// 更简单的写法
+        // return DatabaseHelper.queryEntity(Customer.class, id);
+    	
         String sql = "SELECT * FROM customer WHERE id = ?";
         return DatabaseHelper.queryEntity(Customer.class, sql, id);
     }
