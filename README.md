@@ -10,7 +10,7 @@ joke
 simpleframe 的使用案例项目。包含传统开发方式（org.zhangmz.simpleframe.joke），simpleframe开发方式（org.zhangmz.simpleframe.simplejoke）。
 
 simpleframe-core 
-simpleframe 的本体，实现了Java Web框架必须的MVC、IOC、AOP、ORMapping等功能。
+simpleframe 的本体，实现了Java Web框架必须的MVC、IOC、AOP(项目组成员比较难理解，先不实现)等功能。
 
 软件是发展的，从未停止变化。
 
